@@ -1,6 +1,7 @@
+/uploads
 /node_modules
 /build
-/uploads
+*.mp4
 
 dev.js
 
