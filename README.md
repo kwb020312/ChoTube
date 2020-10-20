@@ -1,20 +1,8 @@
-Hello, My Friends  
-Thank you for having interest in this repository ! 
+# ChoTube
 
-To use this application, 
+## React 와 MongoDB , FireBase 를 이용하여 유튜브 클론코딩하기!
 
-1. make dev.js file inside config folder 
-2. put mongoDB info into dev.js file 
-3. Type  " npm install " inside the root directory  ( Download Server Dependencies ) 
-4. Type " npm install " inside the client directory ( Download Front-end Dependencies )
+#### concurrently 를 이용하면 동시에 서버와 클라이언트 실행이 가능하다
 
-
-If you have problem, feel free to ask me ^^ 
-
-You can watch the tutorial for this app.
-
-https://www.youtube.com/channel/UCFyXA9x8lpL3EYWeYhj4C4Q?view_as=subscriber
-
-
-"# ChoTube" 
-"# ChoTube" 
+#### 해당 방법으로 파일을 서버측으로 보낼 수 있다.
+<img src="./gitImages/postingFile.PNG">
