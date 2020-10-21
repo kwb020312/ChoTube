@@ -14,3 +14,7 @@
 <a href="https://ffmpeg.org/about.html">ffmpeg.com</a>
 
 <img src="./gitImages/ffmpegMain.PNG">
+
+# 업로딩 화면
+
+<img src="./gitImages/uploadVideo.PNG">
