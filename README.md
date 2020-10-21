@@ -27,3 +27,12 @@ export default function Test(props) {
 ```
 
 #### 리액트는 props.history.push('/') 를 하는것으로 초기화면으로 갈 수 있다.
+
+# 데이터 주고받기
+
+#### 서버가 해당 이미지처럼 res.json({전달내용}) 을 보낸다면
+<img src="./gitImages/toClient.PNG">
+
+#### 클라이언트는 .then(res => res.data.(전달내용)) 으로 접근이 가능하다.
+
+<img src="./gitImages/toServer.PNG">

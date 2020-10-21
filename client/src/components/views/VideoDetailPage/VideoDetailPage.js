@@ -37,7 +37,7 @@ export default function VideoDetailPage(props) {
         )
     } else {
         return (
-            <div>...loading</div>
+            null
         )
     }
 }
