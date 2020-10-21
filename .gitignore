@@ -2,7 +2,7 @@
 /node_modules
 /build
 *.mp4
-
+/ffmpeg-3.4.1-win64-static
 dev.js
 
 
