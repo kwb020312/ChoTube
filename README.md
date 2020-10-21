@@ -18,3 +18,12 @@
 # 업로딩 화면
 
 <img src="./gitImages/uploadVideo.PNG">
+
+```javascript
+export default function Test(props) {
+    props.history.push('/')
+}
+
+```
+
+#### 리액트는 props.history.push('/') 를 하는것으로 초기화면으로 갈 수 있다.

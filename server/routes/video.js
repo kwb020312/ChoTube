@@ -1,10 +1,9 @@
 const express = require('express');
 const Ffmpeg = require('fluent-ffmpeg');
 const router = express.Router();
-// const { Video } = require("../models/User");
 const multer  = require('multer')
-
 const { auth } = require("../middleware/auth");
+const {Video} = require('../models/Video')
 
 let storage = multer.diskStorage({
     destination: (req,file,cb) => {
@@ -72,5 +71,16 @@ router.post('/thumbnail' , (req,res) => {
         filename: 'thumbnail-%b.png'
     })
 })
+
+router.post('/uploadVideo' , (req,res) => {
+    const video = new Video(req.body)
+
+    video.save((err , doc) => {
+        if(err) return res.json({success:false , err})
+        res.status(200).json({success:true})
+    })
+})
+
+
 
 module.exports = router;
