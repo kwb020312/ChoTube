@@ -19,13 +19,14 @@ export default function SingleComment({postId , comment , refreshFunction}) {
             content:CommentValue,
             writer: user.userData._id,
             postId: postId,
-            responseTo:comment._id
+            responseTo:comment._id,
         }
         Axios.post('/api/comment/saveComment' , variables)
         .then(response => {
             if(response.data.success) {
                 refreshFunction(response.data.result)
                 setCommentValue("")
+                setOpenReply(false)
             } else {
                 alert('커맨트를 저장하지 못했습니다.')
             }

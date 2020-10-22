@@ -1,6 +1,7 @@
 import Axios from 'axios'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import ReplyComment from './ReplyComment'
 import SingleComment from './SingleComment'
 
 export default function Comment({postId , commentLists , refreshFunction}) {
@@ -33,7 +34,12 @@ export default function Comment({postId , commentLists , refreshFunction}) {
             <p>Replies</p>
             <hr/>
             {commentLists && commentLists.map((comment , i) => (
-                !comment.responseTo && <SingleComment refreshFunction={refreshFunction} comment={comment} postId={postId} />
+                !comment.responseTo && (
+                    <>
+                        <SingleComment refreshFunction={refreshFunction} comment={comment} postId={postId} />
+                        <ReplyComment refreshFunction={refreshFunction} postId={videoId} parentCommentId={comment._id} commentLists={commentLists} />
+                    </>
+                )
             ))}
             
             <form style={{display:'flex'}} onSubmit={onSubmit}>
