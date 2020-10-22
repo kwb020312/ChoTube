@@ -4,11 +4,13 @@ import Title from 'antd/lib/typography/Title';
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
-
-function LandingPage() {
+export default function SubscriptionPage() {
     const [Video, setVideo] = useState([])
     useEffect(() => {
-        Axios.get('/api/video/getVideos')
+        let subscriptionVariables = {
+            userFrom : localStorage.getItem('userId')
+        }
+        Axios.post('/api/video/getSubscriptionVideos', subscriptionVariables)
         .then(response => {
             if(response.data.success) {
                 setVideo(response.data.videos)
@@ -56,5 +58,3 @@ function LandingPage() {
             </div>
     )
 }
-
-export default LandingPage
