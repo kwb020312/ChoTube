@@ -8,6 +8,7 @@ import Subscribe from './Sections/Subscribe'
 export default function VideoDetailPage(props) {
     const videoId = props.match.params.videoId
     const [VideoDetail , setVideoDetail] = useState([])
+    const [Comments , setComments ] = useState([])
     useEffect(() => {
         const variable = {
             videoId
@@ -20,7 +21,19 @@ export default function VideoDetailPage(props) {
                 alert('비디오 정보를 가져오지 못했습니다.')
             }
         })
+        Axios.post('/api/comment/getComments' , variable)
+        .then(response => {
+            if(response.data.success) {
+                setComments(response.data.comments)
+            } else {
+                alert('코멘트 정보를 가져오지 못했습니다')
+            }
+        })
     },[])
+
+    const refreshFunction = (newComment) => {
+        setComments(Comments.concat(newComment))
+    }
 
     if(VideoDetail.writer) {
         const subscribeButton = VideoDetail.writer._id !== localStorage.getItem('userId') && <Subscribe userTo={VideoDetail.writer._id} userFrom={localStorage.getItem('userId')} />
@@ -32,7 +45,7 @@ export default function VideoDetailPage(props) {
                         <List.Item actions={[subscribeButton]}>
                             <List.Item.Meta avatar={<Avatar src={VideoDetail.writer.image}/>} title={VideoDetail.writer.name} description={VideoDetail.description} />
                         </List.Item>
-                        <Comment postId={videoId} />
+                        <Comment refreshFunction={refreshFunction} commentLists={Comments} postId={videoId} />
                     </div>
                 </Col>
                 <Col lg={6} xs={24}>

@@ -54,3 +54,13 @@ import { response } from 'express'
 ```
 
 #### response 를 입력하다보면 express 에서 가져오기  가 자동완성 되는데 이처럼 실행되는 경우 해당 타입에러가 뜨게된다.
+
+# 상향식 상태관리
+
+```javascript
+    const refreshFunction = (newContent) => {
+        setValue(value.concat(newContent))
+    }
+```
+
+#### 상단의 코드와 같이 자신의 State를 수정하는 Function 을 만들어 자신에게 전달 한 후 기존 상태와 concat() 등을 활용해 합춰주면 된다.
