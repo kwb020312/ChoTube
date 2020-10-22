@@ -42,3 +42,15 @@ export default function Test(props) {
 #### <a href="https://ant.design">Ant Design</a> 를 사용하면 css를 사용하지 않아도 충분히 구조화된 Template 을 만들 수 있다
 
 <img src="./gitImages/antd.PNG">
+
+# TypeError
+
+<img src="./gitImages/TypeError.PNG">
+
+#### 해당 오류는 개발하다 보면 어렵지 않게 접할 수 있는데 이는 VSCode 자동완성 기능 때문이다
+
+```javascript
+import { response } from 'express'
+```
+
+#### response 를 입력하다보면 express 에서 가져오기  가 자동완성 되는데 이처럼 실행되는 경우 해당 타입에러가 뜨게된다.

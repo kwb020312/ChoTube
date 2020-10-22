@@ -6,9 +6,9 @@ import SideVideo from './Sections/SideVideo'
 import Subscribe from './Sections/Subscribe'
 
 export default function VideoDetailPage(props) {
+    const videoId = props.match.params.videoId
     const [VideoDetail , setVideoDetail] = useState([])
     useEffect(() => {
-        const videoId = props.match.params.videoId
         const variable = {
             videoId
         }
@@ -32,7 +32,7 @@ export default function VideoDetailPage(props) {
                         <List.Item actions={[subscribeButton]}>
                             <List.Item.Meta avatar={<Avatar src={VideoDetail.writer.image}/>} title={VideoDetail.writer.name} description={VideoDetail.description} />
                         </List.Item>
-                        <Comment />
+                        <Comment postId={videoId} />
                     </div>
                 </Col>
                 <Col lg={6} xs={24}>
