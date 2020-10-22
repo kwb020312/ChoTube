@@ -61,6 +61,8 @@ import { response } from 'express'
     const refreshFunction = (newContent) => {
         setValue(value.concat(newContent))
     }
+    // ...
+    <Children refresh={refreshFunction} />
 ```
 
-#### 상단의 코드와 같이 자신의 State를 수정하는 Function 을 만들어 자신에게 전달 한 후 기존 상태와 concat() 등을 활용해 합춰주면 된다.
+#### 상단의 코드와 같이 자신의 State를 수정하는 Function 을 만들어 자식 컴포넌트 에게 전달 한 후 기존 상태와 concat() 등을 활용해 합춰주면 된다.
