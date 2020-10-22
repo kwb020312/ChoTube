@@ -27,7 +27,7 @@ export default function VideoDetailPage(props) {
                 <Col lg={18} xs={24}>
                     <div style={{width: '100%' , padding: '3rem 4rem'}}>
                         <video style={{width:'100%'}} src={`http://localhost:5000/${VideoDetail.filePath}`} controls />
-                        <List.Item actions={[<Subscribe userTo={VideoDetail.writer._id} />]}>
+                        <List.Item actions={[<Subscribe userTo={VideoDetail.writer._id} userFrom={localStorage.getItem('userId')} />]}>
                             <List.Item.Meta avatar={<Avatar src={VideoDetail.writer.image}/>} title={VideoDetail.writer.name} description={VideoDetail.description} />
                         </List.Item>
                     </div>
