@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ChoTube/static/css/main.87a4097b.chunk.css",
+    "main.js": "/ChoTube/static/js/main.65bda2fd.chunk.js",
+    "main.js.map": "/ChoTube/static/js/main.65bda2fd.chunk.js.map",
+    "runtime-main.js": "/ChoTube/static/js/runtime-main.008a73cb.js",
+    "runtime-main.js.map": "/ChoTube/static/js/runtime-main.008a73cb.js.map",
+    "static/css/2.630594e3.chunk.css": "/ChoTube/static/css/2.630594e3.chunk.css",
+    "static/js/2.c7b1b0de.chunk.js": "/ChoTube/static/js/2.c7b1b0de.chunk.js",
+    "static/js/2.c7b1b0de.chunk.js.map": "/ChoTube/static/js/2.c7b1b0de.chunk.js.map",
+    "index.html": "/ChoTube/index.html",
+    "precache-manifest.125aa31fde9a6c013cb05a5b223d257a.js": "/ChoTube/precache-manifest.125aa31fde9a6c013cb05a5b223d257a.js",
+    "service-worker.js": "/ChoTube/service-worker.js",
+    "static/css/2.630594e3.chunk.css.map": "/ChoTube/static/css/2.630594e3.chunk.css.map",
+    "static/css/main.87a4097b.chunk.css.map": "/ChoTube/static/css/main.87a4097b.chunk.css.map",
+    "static/js/2.c7b1b0de.chunk.js.LICENSE.txt": "/ChoTube/static/js/2.c7b1b0de.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.008a73cb.js",
+    "static/css/2.630594e3.chunk.css",
+    "static/js/2.c7b1b0de.chunk.js",
+    "static/css/main.87a4097b.chunk.css",
+    "static/js/main.65bda2fd.chunk.js"
+  ]
+}
