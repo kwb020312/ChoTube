@@ -2,6 +2,7 @@ import { Avatar, Comment } from 'antd'
 import Axios from 'axios'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import LikeDislikes from './LikeDislikes'
 
 export default function SingleComment({postId , comment , refreshFunction}) {
     const [OpenReply , setOpenReply] = useState(false)
@@ -33,7 +34,8 @@ export default function SingleComment({postId , comment , refreshFunction}) {
         })
     }
     const actions = [
-        <span onClick={onClickReplyOpen} key="comment-basic-reply-to">Reply to</span>
+        <LikeDislikes userId={localStorage.getItem('userId')} commentId={comment._id} />
+        ,<span onClick={onClickReplyOpen} key="comment-basic-reply-to">Reply to</span>
     ]
     return (
         <div>

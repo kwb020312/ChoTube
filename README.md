@@ -15,9 +15,21 @@
 
 <img src="./gitImages/ffmpegMain.PNG">
 
+# 메인화면
+
+<img src="./gitImages/MainVideos.PNG">
+
 # 업로딩 화면
 
 <img src="./gitImages/uploadVideo.PNG">
+
+# 비디오 자세히보기
+
+<img src="./gitImages/videoDetail.PNG">
+
+# 댓글 창
+
+<img src="./gitImages/commentLelay.PNG">
 
 ```javascript
 export default function Test(props) {
